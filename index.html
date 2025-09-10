@@ -14,10 +14,13 @@
       line-height: 1.6;
     }
     .container {
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
+    }
+    header {
       text-align: center;
+      margin-bottom: 2rem;
     }
     h1 {
       font-size: 2.5rem;
@@ -44,12 +47,51 @@
       margin: 2rem 0;
       border-top: 1px solid #ddd;
     }
+    .links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .blog-post {
+      margin-bottom: 1.5rem;
+    }
+    .blog-post h3 {
+      margin-bottom: 0.3rem;
+    }
+    .blog-post p {
+      color: #555;
+    }
+    /* Hidden email styling */
+    .email-link {
+      position: relative;
+      color: transparent;
+      text-decoration: none;
+    }
+    .email-link::after {
+      content: "Show Email";
+      color: #0077cc;
+    }
+    .email-link:hover {
+      color: #0077cc;
+    }
+    .email-link:hover::after {
+      content: attr(data-email);
+      color: #0077cc;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Karel Krkoška</h1>
-    <p>Minimalist | Builder | Explorer</p>
+    <header>
+      <h1>Karel Krkoška</h1>
+      <p>Minimalist | Builder | Explorer</p>
+      <div class="links">
+        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="mailto:karel@example.com" class="email-link" data-email="karel@example.com"></a>
+      </div>
+    </header>
 
     <div class="divider"></div>
 
@@ -59,8 +101,21 @@
     <h2>Work & Projects</h2>
     <p>I’ve worked on software testing, process validation, and building user-focused experiences. Currently exploring ways AI can simplify everyday workflows.</p>
 
-    <h2>Contact</h2>
-    <p>You can reach me at <a href="mailto:karel@example.com">karel@example.com</a>.</p>
+    <h2>Blog & Posts</h2>
+    <div class="blog-post">
+      <h3>Post Title Example</h3>
+      <p>Short description or excerpt from the post. <a href="#">Read more →</a></p>
+    </div>
+    <div class="blog-post">
+      <h3>Another Blog Post</h3>
+      <p>Quick thoughts or updates. <a href="#">Read more →</a></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <footer style="text-align:center; font-size:0.9rem; color:#777;">
+      <p>© 2025 Karel Krkoška</p>
+    </footer>
   </div>
 </body>
 </html>
